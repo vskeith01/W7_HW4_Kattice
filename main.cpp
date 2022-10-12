@@ -21,7 +21,7 @@ int main() {
 
 void fillArray(int list[], int listSize) {
 
-  cout << "Enter " << listSize << " integers: "; // comment out for kattis
+  //cout << "Enter " << listSize << " integers: "; // comment out for kattis
 
   int index;
 
@@ -30,5 +30,15 @@ void fillArray(int list[], int listSize) {
   }
 
   return;
+}
+int indexSmallestElement(const int list[], int listSize) {
+  int minIndex = 0;        // defaulkt assumption is to assume that the larges value is in the first spot.
+
+  for (int index = 1; index < listSize; index++) {
+    if ( list[minIndex] > list[index] )
+        minIndex = index;
+    }
+
+  return minIndex;
 }
 
